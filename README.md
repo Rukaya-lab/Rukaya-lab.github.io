@@ -10,20 +10,22 @@ Here you can find some of the projects I have worked on. You can also check my [
 
 ## Natural Language Processing
 
-### [Detecting Hate Speech in Tweets]()
+### [Detecting Hate Speech in Tweets](https://github.com/Rukaya-lab/NLP-notebooks/blob/main/Detecting%20Hate%20speech%20in%20tweet.ipynb)
 
 - Project: Classification of Tweets into Hateful speech or Normal Speech
 - Context: Hate speech is defined as public speech that expresses hate, disparages, or incites or encourages violence against another individual or group based on some characteristic such as race, gender, religious belief, sexual orientation, etc. 
 - Dataset: The dataset contains 5,232 total rows of archived tweets with 3000 as non-hateful speech and 2242 hateful speech.
 - Steps I took for the task
-  - Tokenization
-  - Normalization(Stemming or lemmatization)
-  - Removing stop words
+  - Removing stop words and special characters
   - Vectorization
-- Result
-  - Classification using the Guassian Naives Bayes Model with an Accuaracy of 60% and 86% when calssified after vectorization.
 
-![image](https://github.com/Rukaya-lab/Rukaya-lab.github.io/assets/74497446/3d469d62-5828-48a7-906f-f69384b179b2) ![image](https://github.com/Rukaya-lab/Rukaya-lab.github.io/assets/74497446/75c2deb1-8c7d-488a-a9c0-f2671e01ebb2)
+![image](https://github.com/Rukaya-lab/Rukaya-lab.github.io/assets/74497446/3d469d62-5828-48a7-906f-f69384b179b2)
+- Result
+  - Classification using the Guassian Naives Bayes Model with an Accuaracy of 60% and,
+
+  - Classification after feature engineering with Count Vectorizer with Multinomial Naive Bayes gave an accuracy 86%.
+  
+ ![image](https://github.com/Rukaya-lab/Rukaya-lab.github.io/assets/74497446/75c2deb1-8c7d-488a-a9c0-f2671e01ebb2)
 
 
 ## Deep Learning- Tensorflow
