@@ -31,6 +31,30 @@ Here you can find some of the projects I have worked on. You can also check my [
 ## Deep Learning- Tensorflow
 ## Classification
 
+### [Credit Card Lead Prediction](https://github.com/Rukaya-lab/Project-/blob/main/Credit_card_interest_classification.ipynb)
+
+- Project: Happy Customer Bank is a mid-sized private bank that deals in all kinds of banking products, like Savings accounts, Current accounts, investment products, credit products, among other offerings.
+- Task: Identifying customers that could show higher intent towards a recommended credit card
+- Dataset description: 
+  - The training dataset contains 245725 rows, 11 feature columns
+  - The dataset is an unbalanced dataset,  the traget column contains 187437 Customer is not interested and 58288 Customer is interested.
+  
+ ![image](https://github.com/Rukaya-lab/Rukaya-lab.github.io/assets/74497446/46454917-682a-4d91-a7b3-ae8096d20c6f)
+
+ - Approach
+   - Label Encoder for ordinal categorical columns and one hot encoder for nominal variables.
+   - The dataset is an unbalanced dataset, the traget column contains 187437 Customer is not interested and 58288 Customer is interested.
+      Hence, I used the SMOTE from imblearn.over_sampling library to upsample the class
+   - Preprocessed the datset over a standard scaler to bring the distribution closer
+   - Built the ML model using voting classifier which uses logistic regression and random forest as the two base sub model.
+      The voting classifier gave an accuracy of 0.77, the logistic model gave an accuracy of 0.75 and the random forest model with an accuracy of 0.76
+   - Built a Xgboost Model that gave 0.76 accuaracy and F1 score of 0.84
+   - Built a basic tensorflow Sequential model and avoided overfitting by calling early stopping.
+     The model gave and accuracy of: 0.8580 - mean squared error(mse) of : 0.0968 - and validation accuracy of : 0.7826 - validation_mse: 0.1465
+     
+   ![image](https://github.com/Rukaya-lab/Rukaya-lab.github.io/assets/74497446/21d7a2bf-be91-4abf-81f8-7754bdb6bc59)
+
+
 ## Data Analaysis and Exploration Projects
 
 ### [Investigate a Dataset: No Show Appointment](https://github.com/Rukaya-lab/Project-/blob/main/Investigate_a_Dataset.ipynb)
