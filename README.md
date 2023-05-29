@@ -21,3 +21,27 @@ Here you can find some of the projects I have worked on. You can also check my [
 ![image](https://github.com/Rukaya-lab/Rukaya-lab.github.io/assets/74497446/c5add26d-8aa8-4134-9d36-9f692b5e20af)
 
 
+### [Wrangle and Analyze Data: We Rate Dogs](https://github.com/Rukaya-lab/Project-/blob/main/WeRateDogs/wrangle_act.ipynb)
+
+- Project: Wrangle data from different sources and Analyze.
+  WeRateDogs is a Twitter account that posts and rates pictures of dogs. 
+- Dataset:
+Gathring the dataset from different data sources including:
+  - A csv data file directly from archived data 
+  - Using the Requests library to download the tweet image prediction
+  - Using the Tweepy library to query additional data via the Twitter API
+- Task:
+  - detecting and cleaning quality issues and tidiness issue with the data.
+    - There are significant number of missing values in the twitter archive dataset
+    - The name column has a lot of duplicated values and some names are None
+    - Tweet ids are currently in integer but they should be strings
+    - The timestamp is in integer format rather than datetime
+    - The dog stages are in separate columns but they should be in one
+    - The three dataset have tweet id in common, hence could be combined
+ - Exploration:
+    - The most common dog breed is the Labrador Retriever.
+    - The highest number of retweet is recorded in 2016
+    - The most common name is Charlie followed by Cooper, Lucy and Oliver with the same count
+
+ 
+ ![image](https://github.com/Rukaya-lab/Rukaya-lab.github.io/assets/74497446/9f20079b-ea18-4dd2-873d-c30509e85d32)
