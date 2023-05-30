@@ -30,7 +30,7 @@ Here you can find some of the projects I have worked on. You can also check my [
 
 ## Deep Learning- Tensorflow
 
-### [Segmentation and Classification of fishes using Images]()
+### [Segmentation and Classification of fishes using Images](https://www.kaggle.com/rukayaamzat/91-accuracy-cnn-for-fish-classification)
 - Project: Augmentation and Classification of the fishes based on images to their correct class using Sequential model.
 - The dataset contains 9 different seafood types collected from a supermarket in Izmir, Turkey for a university-industry collaboration project at Izmir University of Economics.   
     The dataset contains 9000 images. For each class, there are 1000 augmented images and their pair-wise augmented ground truths.
@@ -38,12 +38,13 @@ Here you can find some of the projects I have worked on. You can also check my [
   - Keras Image Data generation was used for Image preprocessing and all images are resized to a target size of (224, 224).
   - A convolution layer with filter size of 32 and a Max pool layer with a pool_size of (2, 2) was included in the sequential model.
   - Drop out of 30% was included to avoid overfitting.
-  - The trained model achieved an accuracy of 92% and a recall of 98%
+  - The trained model achieved an accuracy of 92% and a recall of 98%.
+- Conclusion: The model really performed well on this partcular dataset and has achieved a low loss value for both the train and validation set. The recall and precsion is also quite high and there doesn't seem to be any over fitting.
 
 
 ![](/images/fish_loss.png)
 
-##### The model performed quite well with predicting the fish classes
+##### The model performed quite well with predicting the fish classes.
 
 ![](images/fish_class.png)
 
@@ -51,12 +52,18 @@ Here you can find some of the projects I have worked on. You can also check my [
 - Project: Prediction whether a patient has heart disease based on their medical vitals.
 - Dataset: The dataset contains the age, sex, blood pressure, heart rate, blood sugar etc values. It has 14 columns and about 300 data samples
 - Approach: For this project, I decided to explore feature selection and behaviour of the model when couple of the features are left out.
-  ###### Trained first a base sequential model that achieved a training loss of 0.37 and accuracy of 82% and validation loss of  0.54 and accuracy of 79%
-![](images/loss_without.png)
-  ###### Use the Recursive Feature Elimination approach with random forest model as the base model to slecet the top features that affect the models performance
-![](images/feature_selected.png)
-  ###### Trained another sequential model that achieved a training loss of 0.48 and accuracy of 78% and validation loss of 0.45 and accuracy of 84%
-![](images/loss_with.png)
+  - Trained first a base sequential model that achieved a training loss of 0.37 and accuracy of 82% and validation loss of  0.54 and accuracy of 79%.
+
+![](images/loss without.png)
+
+  - Use the Recursive Feature Elimination approach with random forest model as the base model to slecet the top features that affect the models performance.
+
+![](images/feature selected.png)
+
+  - Trained another sequential model that achieved a training loss of 0.48 and accuracy of 78% and validation loss of 0.45 and accuracy of 84%.
+
+![](images/loss with.png)
+
 - Findings: Even though the accuracy of the train set didn't experience any significant positive change, it is worthy noting that with a few of the features the model was still   able to learn enough of the operations of the dataset and perform fairly while and the loss difference is set to low. On the flip side the validation dataset perfromed better when the features were selected which can then translate to the fact that any unseen dataset tested with the second model is going to be close to its ground truth.
 
 ## Classification
