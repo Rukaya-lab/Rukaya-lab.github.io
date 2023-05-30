@@ -42,7 +42,8 @@ Here you can find some of the projects I have worked on. You can also check my [
 
 
 ![](/images/fish_loss.png)
-The model performed quite well with predicting the fish classes
+
+##### The model performed quite well with predicting the fish classes
 
 ![](images/fish_class.png)
 
@@ -51,11 +52,11 @@ The model performed quite well with predicting the fish classes
 - Dataset: The dataset contains the age, sex, blood pressure, heart rate, blood sugar etc values. It has 14 columns and about 300 data samples
 - Approach: For this project, I decided to explore feature selection and behaviour of the model when couple of the features are left out.
   - Trained first a base sequential model that achieved a training loss of 0.37 and accuracy of 82% and validation loss of  0.54 and accuracy of 79%
-    ![](images/loss_without.png)
+![](images/loss_without.png)
   - Use the Recursive Feature Elimination approach with random forest model as the base model to slecet the top features that affect the models performance
-    ![](images/feature_selected.png)
+![](images/feature_selected.png)
   - Trained another sequential model that achieved a training loss of 0.48 and accuracy of 78% and validation loss of 0.45 and accuracy of 84%
-    ![](images/loss_with.png)
+![](images/loss_with.png)
 - Findings: Even though the accuracy of the train set didn't experience any significant positive change, it is worthy noting that with a few of the features the model was still   able to learn enough of the operations of the dataset and perform fairly while and the loss difference is set to low. On the flip side the validation dataset perfromed better when the features were selected which can then translate to the fact that any unseen dataset tested with the second model is going to be close to its ground truth.
 
 ## Classification
