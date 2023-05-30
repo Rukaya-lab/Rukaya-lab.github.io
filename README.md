@@ -29,6 +29,22 @@ Here you can find some of the projects I have worked on. You can also check my [
 
 
 ## Deep Learning- Tensorflow
+
+### [Segmentation and Classification of fishes using Images]()
+- Project: Augmentation and Classification of the fishes based on images to their correct class using Sequential model.
+- The dataset contains 9 different seafood types collected from a supermarket in Izmir, Turkey for a university-industry collaboration project at Izmir University of Economics.   
+    The dataset contains 9000 images. For each class, there are 1000 augmented images and their pair-wise augmented ground truths.
+- Approach:
+  - Keras Image Data generation was used for Image preprocessing and all images are resized to a target size of (224, 224).
+  - A convolution layer with filter size of 32 and a Max pool layer with a pool_size of (2, 2) was included in the sequential model.
+  - Drop out of 30% was included to avoid overfitting.
+  - The trained model achieved an accuracy of 92% and a recall of 98%
+
+image.png
+
+image.png
+
+### []()
 ## Classification
 
 ### [Credit Card Lead Prediction](https://github.com/Rukaya-lab/Project-/blob/main/Credit_card_interest_classification.ipynb)
