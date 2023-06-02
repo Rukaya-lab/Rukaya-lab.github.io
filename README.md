@@ -11,9 +11,7 @@ Here you can find some of the projects I have worked on. You can also check my [
 ## Machine Learning Projects
 
 
-### Natural Language Processing
-
-### [Smart Conversation Reply](https://github.com/Rukaya-lab/Smart-Reply-suggest)
+## [Smart Conversation Reply](https://github.com/Rukaya-lab/Smart-Reply-suggest)
 - Problem: In today's fast-paced world, it can be difficult to keep up with all of the messages we receive. This can lead to missed opportunities, misunderstandings, and even stress.
 - Solution: A smart reply system could help people to save time and improve their communication. By automatically suggesting relevant responses to incoming messages, a smart reply system could free up people to focus on more important tasks.
 - Approach: A smart reply system could be implemented using a variety of techniques, including natural language processing (NLP) and long short-term memory (LSTM) models. NLP techniques could be used to identify the key words and phrases in a message, while LSTM models could be used to predict the most likely response.
@@ -73,7 +71,8 @@ Example usage
 
 
 
-### [Detecting Hate Speech in Tweets](https://github.com/Rukaya-lab/NLP-notebooks/blob/main/Detecting%20Hate%20speech%20in%20tweet.ipynb)
+
+## [Detecting Hate Speech in Tweets](https://github.com/Rukaya-lab/NLP-notebooks/blob/main/Detecting%20Hate%20speech%20in%20tweet.ipynb)
 
 - Project: Classification of Tweets into Hateful speech or Normal Speech
 - Context: Hate speech is defined as public speech that expresses hate, disparages, or incites or encourages violence against another individual or group based on some characteristic such as race, gender, religious belief, sexual orientation, etc. 
@@ -91,9 +90,9 @@ Example usage
  ![image](https://github.com/Rukaya-lab/Rukaya-lab.github.io/assets/74497446/75c2deb1-8c7d-488a-a9c0-f2671e01ebb2)
 
 
-#### Deep Learning- Tensorflow
 
-### [Segmentation and Classification of fishes using Images](https://www.kaggle.com/rukayaamzat/91-accuracy-cnn-for-fish-classification)
+
+## [Segmentation and Classification of fishes using Images](https://www.kaggle.com/rukayaamzat/91-accuracy-cnn-for-fish-classification)
 - Project: Augmentation and Classification of the fishes based on images to their correct class using Sequential model.
 - The dataset contains 9 different seafood types collected from a supermarket in Izmir, Turkey for a university-industry collaboration project at Izmir University of Economics.   
     The dataset contains 9000 images. For each class, there are 1000 augmented images and their pair-wise augmented ground truths.
@@ -111,7 +110,10 @@ Example usage
 
 ![](images/fish_class.png)
 
-### [Heart Disease Prediction](https://github.com/Rukaya-lab/Tensorflow-practice/blob/main/Dp_Classification%2C_heart_disease.ipynb)
+
+
+
+## [Heart Disease Prediction](https://github.com/Rukaya-lab/Tensorflow-practice/blob/main/Dp_Classification%2C_heart_disease.ipynb)
 - Project: Prediction whether a patient has heart disease based on their medical vitals.
 - Dataset: The dataset contains the age, sex, blood pressure, heart rate, blood sugar etc values. It has 14 columns and about 300 data samples
 - Approach: For this project, I decided to explore feature selection and behaviour of the model when couple of the features are left out.
@@ -129,9 +131,10 @@ Example usage
 
 - Findings: Even though the accuracy of the train set didn't experience any significant positive change, it is worthy noting that with a few of the features the model was still   able to learn enough of the operations of the dataset and perform fairly while and the loss difference is set to low. On the flip side the validation dataset perfromed better when the features were selected which can then translate to the fact that any unseen dataset tested with the second model is going to be close to its ground truth.
 
-#### Classification
 
-### [Credit Card Lead Prediction](https://github.com/Rukaya-lab/Project-/blob/main/Credit_card_interest_classification.ipynb)
+
+
+## [Credit Card Lead Prediction](https://github.com/Rukaya-lab/Project-/blob/main/Credit_card_interest_classification.ipynb)
 
 - Project: Happy Customer Bank is a mid-sized private bank that deals in all kinds of banking products, like Savings accounts, Current accounts, investment products, credit products, among other offerings.
 - Task: Identifying customers that could show higher intent towards a recommended credit card
@@ -155,9 +158,12 @@ Example usage
    ![image](https://github.com/Rukaya-lab/Rukaya-lab.github.io/assets/74497446/21d7a2bf-be91-4abf-81f8-7754bdb6bc59)
 
 
+
+
 ## Data Analaysis and Exploration Projects
 
-### [Investigate a Dataset: No Show Appointment](https://github.com/Rukaya-lab/Project-/blob/main/Investigate_a_Dataset.ipynb)
+
+## [Investigate a Dataset: No Show Appointment](https://github.com/Rukaya-lab/Project-/blob/main/Investigate_a_Dataset.ipynb)
 
 - Project: Medical Appointment No Shows. Why do 30% of patients miss their scheduled appointments?
 - Context: A person makes a doctor appointment, receives all the instructions and no-show. Who to blame?
@@ -171,7 +177,8 @@ Example usage
 ![image](https://github.com/Rukaya-lab/Rukaya-lab.github.io/assets/74497446/c5add26d-8aa8-4134-9d36-9f692b5e20af)
 
 
-### [Wrangle and Analyze Data: We Rate Dogs](https://github.com/Rukaya-lab/Project-/blob/main/WeRateDogs/wrangle_act.ipynb)
+
+## [Wrangle and Analyze Data: We Rate Dogs](https://github.com/Rukaya-lab/Project-/blob/main/WeRateDogs/wrangle_act.ipynb)
 
 - Project: Wrangle data from different sources and Analyze.
   WeRateDogs is a Twitter account that posts and rates pictures of dogs. 
