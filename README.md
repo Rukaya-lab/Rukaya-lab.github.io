@@ -1,5 +1,6 @@
 # Rukayat AMZAT
 
+
 #### Portfolio
 
 
@@ -7,12 +8,72 @@
 
 Here you can find some of the projects I have worked on. You can also check my [LinkedIn](https://www.linkedin.com/in/rukayat-amzat-889839173/) profile for further information.
 
-### Machine Learning Projects
+## Machine Learning Projects
 
 
-#### Natural Language Processing
+### Natural Language Processing
 
-##### [Detecting Hate Speech in Tweets](https://github.com/Rukaya-lab/NLP-notebooks/blob/main/Detecting%20Hate%20speech%20in%20tweet.ipynb)
+### [Smart Conversation Reply](https://github.com/Rukaya-lab/Smart-Reply-suggest)
+- Problem: In today's fast-paced world, it can be difficult to keep up with all of the messages we receive. This can lead to missed opportunities, misunderstandings, and even stress.
+- Solution: A smart reply system could help people to save time and improve their communication. By automatically suggesting relevant responses to incoming messages, a smart reply system could free up people to focus on more important tasks.
+- Approach: A smart reply system could be implemented using a variety of techniques, including natural language processing (NLP) and long short-term memory (LSTM) models. NLP techniques could be used to identify the key words and phrases in a message, while LSTM models could be used to predict the most likely response.
+  - Building Similarity indexes with the ANNOY library.
+  - Empolying Hdbscan clustering to cluster similar replies.
+  - LSTM since they have memory and able to keep context.
+
+
+#### The Data
+
+[Data can be found here](https://www.kaggle.com/datasets/arnavsharmaas/chatbot-dataset-topical-chat)
+This is a Topical Chat dataset from Amazon! It consists of over 8000 conversations and over 184000 messages.
+
+#### Steps
+
+1. Wrangling
+  - Since the dataset was originally compiled for some other text calssification task, I had to re process and collect only the information that is necessary for the project.
+
+2. Tokenization of the input and target texts to convert the input and target texts to sequences of integers. 
+
+3. Creating Annoy Index for both the Input and Target Texts using Annoy algorithm is to find the nearest neighbors of a given text.
+
+4. Clustering using the similarity matrix for both input and target texts.
+  - Tested both the hdbscan algorithm and dbscan algorithm using different epsilon value while finding the optimal value for the epsilon parameter.
+
+5. Generate padded sequences from a list of input sequences.  
+  - The padding ensures that all input sequences are the same length, which can improve the performance of the model.
+
+6. Modeling with LSTM
+  The model is a sequential model with the following layers:
+
+    - An embedding layer that converts the input text into a sequence of dense vectors.
+    - A long short-term memory (LSTM) layer that learns long-range dependencies in the input text.
+    - A dropout layer that randomly drops out some of the neurons in the model, which helps to prevent overfitting.
+    - A dense layer that outputs the predicted probability distribution over the possible target labels.
+
+#### Result
+  The model achieved a loss of 0.1177 and  accuracy of 97%.
+
+Example usage
+   Input - bye
+
+    Response 1 -> bye  
+    Response 2 -> have a good one  
+    Response 3 -> same to you  
+    Response 4 -> have a good weekend  
+
+#### Potential Stonewall
+  - The similarity index building is quite large and takes time to create hence you need GPU access.
+  - Since the texts have been stripped of punctuations in the preprocessing, one needs to find a way to add them back.
+
+#### Next Steps
+  - A dataset can be built speciafically for this project that will be robust enough to capture conversation complexities. The current dataset contains some converstaions that are topic specific.
+  - I tried to add back the punctation using the rpunct library i found on Hugging face but the libraray hasn't been updated for a while and hence didn't captuer all punctions. So a work could be done focused on that.
+  - The clustering method can be improved.
+  - Deploying the model.
+
+
+
+### [Detecting Hate Speech in Tweets](https://github.com/Rukaya-lab/NLP-notebooks/blob/main/Detecting%20Hate%20speech%20in%20tweet.ipynb)
 
 - Project: Classification of Tweets into Hateful speech or Normal Speech
 - Context: Hate speech is defined as public speech that expresses hate, disparages, or incites or encourages violence against another individual or group based on some characteristic such as race, gender, religious belief, sexual orientation, etc. 
@@ -32,7 +93,7 @@ Here you can find some of the projects I have worked on. You can also check my [
 
 #### Deep Learning- Tensorflow
 
-##### [Segmentation and Classification of fishes using Images](https://www.kaggle.com/rukayaamzat/91-accuracy-cnn-for-fish-classification)
+### [Segmentation and Classification of fishes using Images](https://www.kaggle.com/rukayaamzat/91-accuracy-cnn-for-fish-classification)
 - Project: Augmentation and Classification of the fishes based on images to their correct class using Sequential model.
 - The dataset contains 9 different seafood types collected from a supermarket in Izmir, Turkey for a university-industry collaboration project at Izmir University of Economics.   
     The dataset contains 9000 images. For each class, there are 1000 augmented images and their pair-wise augmented ground truths.
@@ -70,7 +131,7 @@ Here you can find some of the projects I have worked on. You can also check my [
 
 #### Classification
 
-##### [Credit Card Lead Prediction](https://github.com/Rukaya-lab/Project-/blob/main/Credit_card_interest_classification.ipynb)
+### [Credit Card Lead Prediction](https://github.com/Rukaya-lab/Project-/blob/main/Credit_card_interest_classification.ipynb)
 
 - Project: Happy Customer Bank is a mid-sized private bank that deals in all kinds of banking products, like Savings accounts, Current accounts, investment products, credit products, among other offerings.
 - Task: Identifying customers that could show higher intent towards a recommended credit card
@@ -94,9 +155,9 @@ Here you can find some of the projects I have worked on. You can also check my [
    ![image](https://github.com/Rukaya-lab/Rukaya-lab.github.io/assets/74497446/21d7a2bf-be91-4abf-81f8-7754bdb6bc59)
 
 
-### Data Analaysis and Exploration Projects
+## Data Analaysis and Exploration Projects
 
-##### [Investigate a Dataset: No Show Appointment](https://github.com/Rukaya-lab/Project-/blob/main/Investigate_a_Dataset.ipynb)
+### [Investigate a Dataset: No Show Appointment](https://github.com/Rukaya-lab/Project-/blob/main/Investigate_a_Dataset.ipynb)
 
 - Project: Medical Appointment No Shows. Why do 30% of patients miss their scheduled appointments?
 - Context: A person makes a doctor appointment, receives all the instructions and no-show. Who to blame?
@@ -110,7 +171,7 @@ Here you can find some of the projects I have worked on. You can also check my [
 ![image](https://github.com/Rukaya-lab/Rukaya-lab.github.io/assets/74497446/c5add26d-8aa8-4134-9d36-9f692b5e20af)
 
 
-##### [Wrangle and Analyze Data: We Rate Dogs](https://github.com/Rukaya-lab/Project-/blob/main/WeRateDogs/wrangle_act.ipynb)
+### [Wrangle and Analyze Data: We Rate Dogs](https://github.com/Rukaya-lab/Project-/blob/main/WeRateDogs/wrangle_act.ipynb)
 
 - Project: Wrangle data from different sources and Analyze.
   WeRateDogs is a Twitter account that posts and rates pictures of dogs. 
