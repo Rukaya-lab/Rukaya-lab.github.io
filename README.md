@@ -11,6 +11,30 @@ Here you can find some of the projects I have worked on. You can also check my [
 ## Machine Learning Projects
 
 
+## [Querying and reading Multiple PDF files using OpenAI and Langchain](https://github.com/Rukaya-lab/OpenAI_ex/blob/main/Quering_Multiple_PDF_from_Vector_Store_using_Langchain.ipynb)
+
+Background: With LLM prevalent and are trained on various human data, it poses the question of hallucination. What if we want to leverage the benefit of large language models but have our own specific knowledge base e.g PDF files.
+Solution: Integrate the data sources into the OpenAI querying pipeline.
+Approach: 
+  - Using the Langchain library.
+    - LangChain is an open-source framework designed for developing applications powered by a language model.
+    - It provides the integration with OpenAI as the Large Language Model (LLM) and a PDF explorer library called UnstructuredPDFLoader.
+  - The files are then converted to a documnet langchain object.
+  - A vectorstore Index is used to convert the data in the documents to indexes that the LLM can understand.
+    **VectorstoreIndexCreator:**
+     There are three main steps going on in the background when the vectorstoreindex is used after the documents are loaded:
+      - Splitting documents into chunks
+
+      - Creating embeddings for each document
+
+      - Storing documents and embeddings in a vectorstore
+  - The created index can then be queried to return answers as found in the documents.
+
+![](/images/query.png)
+
+
+
+
 ## [Smart Conversation Reply](https://github.com/Rukaya-lab/Smart-Reply-suggest)
 - Problem: In today's fast-paced world, it can be difficult to keep up with all of the messages we receive. This can lead to missed opportunities, misunderstandings, and even stress.
 - Solution: A smart reply system could help people to save time and improve their communication. By automatically suggesting relevant responses to incoming messages, a smart reply system could free up people to focus on more important tasks.
@@ -89,6 +113,56 @@ Example usage
   - Classification after feature engineering with Count Vectorizer with Multinomial Naive Bayes gave an accuracy 86%.
   
  ![image](https://github.com/Rukaya-lab/Rukaya-lab.github.io/assets/74497446/75c2deb1-8c7d-488a-a9c0-f2671e01ebb2)
+
+
+
+## [Face Recognition with Siamese Network](https://github.com/Rukaya-lab/Face-Verification-with-Siamese-Network-and-Kivy-App)
+Project: Detect and recognize human faces in images or via video streams.
+Model Architecture: Siamese Convolutation Neural Network.
+  - A Siamese network is a type of neural network (Convolutionall Ne) that consists of two or more identical networks that are trained together. The networks are trained to learn a shared representation of the input data, and they are then used to compare pairs of inputs and determine whether they are the same or different.
+#### The Data
+
+For this project there are two sets of Dataset.
+One is a public data set of different labelled faces [Labelled Faces](http://vis-www.cs.umass.edu/lfw/), 
+and the other dataset is that of my faces at different angles and augmentations.
+
+- The public dataset id labelled as the Negative dataset and my own images are bothe the positive data and the Anchor images.
+    - open Cv libarary is used to collect the images from video capture.
+    - The images collected were augmneted to create more samples of different properties to enable for a larger dataset.
+    - All the collected images were resized to have a unifirm dimension of 100 by 100 
+- The anchor images are then used with the positive and negative dataset to craete a paired and labeled dataset.
+    - match a positive with an anchor and takes value of 1 since it the same person.
+    - match negative and anchor and that will take a 0 since the two people wouldnt match.
+    - That generated 6000 samples of paired data. 70% was for training and 30% for testing.      
+
+#### The Model
+
+##### Embedding Layer
+- There are two embedding layer built. The Input embedding layer for the input images nad the Validation embedding layer for the validation images.
+- Each model layer consist of:
+    - The model consists of four convolution blocks, each followed by a max pooling layer. 
+    - The convolution blocks use 64, 128, 128, and 256 filters, respectively. 
+    - The max pooling layers use a pool size of 2x2 and a stride of 2. 
+    - The final layer of the model is a dense layer with 4096 neurons. 
+    - The activation function for all layers is ReLU, except for the final layer, which uses a sigmoid activation function.
+
+### Distance Layer
+A distance layer is built to calculate the L1 distance between two embeddings. 
+- The L1 distance is a measure of the difference between two vectors. It is calculated by taking the absolute difference between the corresponding elements of the vectors.
+- The distance is the the difference between the inpu embeddinga and the validation embedding.
+
+** The Siamese network is then the amalgamtion of the Distance layers, embeddings and images. **
+
+- The loss function is the Binary Cross Entropy.
+- The optimizer is Adam.
+- The metric is Accuracy, Precison, Recall
+- The model achived a precision and recall of 1.0.
+
+![](/images/verified.jpg)
+
+### UI with Kivy
+- Created a base UI app to interact with the model.
+![](/images/kivy.png)
 
 
 
