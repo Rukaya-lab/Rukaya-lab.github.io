@@ -15,6 +15,9 @@ Here you can find some of the projects I have worked on. You can also check my [
 
 Background: With LLM prevalent and trained on various human data, it poses the question of hallucination. What if we want to leverage the benefit of large language models but have our own specific knowledge base, e.g. PDF files.
 
+Bajfdfdkshwaiuiusajg
+this is juyts  atest and I am making a presentation for Wida series
+
 Solution: Integrate the data sources into the OpenAI querying pipeline.
 
 Approach: 
