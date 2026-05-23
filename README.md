@@ -1,13 +1,47 @@
 # Rukayat AMZAT
 
-#### Portfolio
-
-
-## Welcome to my GitHub Page
+## Welcome to my Portfolio
 
 Here you can find some of the projects I have worked on. You can also check my [LinkedIn](https://www.linkedin.com/in/rukayat-amzat-889839173/) profile for further information.
 
-## Machine Learning Projects
+
+## ML/AI Projects
+
+## [AI_chatbot_LLM_QA_evaluator](https://github.com/Rukaya-lab/AI_Chatbot_Testing_LLM_evaluator)
+
+Background: LLM outputs are often inconsistent and difficult to evaluate manually at scale. This project demonstrates a simplified QA evaluation pipeline that mimics how AI-generated content can be systematically assessed using predefined rubrics, similar to early-stage RLHF evaluation workflows.
+
+Approach: Built a lightweight LLM evaluation framework that applies structured, rule-based rubrics to assess the quality of AI-generated responses. The system simulates an AI testing pipeline used in QA and GenAI evaluation workflows, enabling deterministic scoring without reliance on external APIs.
+
+The tool provides an interactive Streamlit interface where users can test “good” and “bad” model responses and observe how different quality dimensions (clarity, completeness, structure, and relevance) affect evaluation outcomes.
+
+Stack: Python, Streamlit, OpenAI API
+
+Example Usage:
+Users can select between:
+High-quality structured response (expected PASS)
+
+![](/images/llm-evaluator-1.png)
+
+![](/images/llm-evaluator-2.png)
+
+![](/images/llm-evaluator-3.png)
+
+Low-quality / nonsensical response (expected FAIL)
+
+![](/images/llm-evaluator-4.png)
+
+![](/images/llm-evaluator-5.png)
+
+The system evaluates and returns:
+Score breakdown
+Final decision (PASS / FAIL)
+
+Possible Improvements:
+Replace rule-based scoring with LLM-as-a-judge evaluation
+Add embedding-based semantic similarity scoring
+Introduce multi-model evaluation comparison
+Expand into dataset benchmarking tool for LLM outputs
 
 
 ## [Querying and reading Multiple PDF files using OpenAI and Langchain](https://github.com/Rukaya-lab/OpenAI_ex/blob/main/Quering_Multiple_PDF_from_Vector_Store_using_Langchain.ipynb)
